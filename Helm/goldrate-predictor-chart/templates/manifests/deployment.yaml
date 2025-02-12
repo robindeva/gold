@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goldrate-predictor
+  labels:
+    app: goldrate-predictor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goldrate-predictor
+  template:
+    metadata:
+      labels:
+        app: goldrate-predictor
+    spec:
+      containers:
+      - name: goldrate-predictor
+        image: robindeva/goldrate-predictor:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 7860

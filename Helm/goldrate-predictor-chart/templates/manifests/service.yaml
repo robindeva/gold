@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: goldrate-predictor
+  labels:
+    app: goldrate-predictor
+spec:
+  ports:
+  - port: 80
+    targetPort: 7860
+    protocol: TCP
+  selector:
+    app: goldrate-predictor
+  type: ClusterIP
