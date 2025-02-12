@@ -13,7 +13,7 @@ demo = gr.Interface(
     fn=calculate_goldrate,
     inputs=["number"],
     outputs=["number"],
-    title="How much is 1g of gold in India NOW?"
+    title="Gold Rate Calculator"
 )
 
-demo.launch(share=True)
+demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
