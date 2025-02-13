@@ -55,6 +55,6 @@ jobs:
       run: |
         git config --global user.email "robindeva.rj@gmail.com"
         git config --global user.name "robindeva"
-        git add helm/go-web-app-chart/values.yaml
+        git add Helm/goldrate-predictor-chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
